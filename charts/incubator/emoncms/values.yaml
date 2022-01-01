@@ -7,9 +7,9 @@
 
 image:
   # -- image repository
-  repository: emoncms/emoncms
+  repository: openenergymonitor/emoncms
   # -- image tag
-  tag: 1.0.0
+  tag: 10.8.5
   # -- image pull policy
   pullPolicy: IfNotPresent
 
@@ -39,3 +39,19 @@ persistence: {}
   # data:
   #   enabled: false
   #   mountPath: /data
+
+mariadb:
+  enabled: false
+  architecture: standalone
+  auth:
+    database: <chart name>
+    username: <chart name>
+    password: <chart password>
+    rootPassword: home-assistantrootpass
+  primary:
+    persistence:
+      enabled: false
+
+redis:
+  enabled: false
+  architecture: standalone
