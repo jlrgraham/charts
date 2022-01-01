@@ -1,0 +1,19 @@
+apiVersion: v2
+appVersion: 1.0.0
+description: emoncms helm package
+name: emoncms
+version: 2.1.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+- emoncms
+home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/emoncms
+icon: https://emoncms.org/icon
+sources:
+- https://github.com/emoncms/emoncms-docker
+maintainers:
+- name: emoncms
+  email: emoncms@emoncms.com
+dependencies:
+- name: common
+  repository: https://library-charts.k8s-at-home.com
+  version: 4.2.0
